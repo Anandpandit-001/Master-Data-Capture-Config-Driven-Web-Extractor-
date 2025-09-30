@@ -1,0 +1,77 @@
+[
+    {
+        "sku":"MH09",
+        "description":"This is a variable product called a Abominable Hoodie",
+        "category":null
+    },
+    {
+        "sku":"WJ08",
+        "description":"This is a variable product called a Adrienne Trek Jacket",
+        "category":null
+    },
+    {
+        "sku":"MS01",
+        "description":"This is a variable product called a Aero Daily Fitness Tee",
+        "category":null
+    },
+    {
+        "sku":"MP11",
+        "description":"This is a variable product called a Aether Gym Pant",
+        "category":null
+    },
+    {
+        "sku":"24-UG06",
+        "description":"This is a simple product called Affirm Water Bottle",
+        "category":null
+    },
+    {
+        "sku":"24-MG04",
+        "description":"This is a simple product called Aim Analog Watch",
+        "category":null
+    },
+    {
+        "sku":"MH12",
+        "description":"This is a variable product called a Ajax Full-Zip Sweatshirt",
+        "category":null
+    },
+    {
+        "sku":"WSH10",
+        "description":"This is a variable product called a Ana Running Short",
+        "category":null
+    },
+    {
+        "sku":"WSH06",
+        "description":"This is a variable product called a Angel Light Running Short",
+        "category":null
+    },
+    {
+        "sku":"WT08",
+        "description":"This is a variable product called a Antonia Racer Tank",
+        "category":null
+    },
+    {
+        "sku":"MSH02",
+        "description":"This is a variable product called a Apollo Running Short",
+        "category":null
+    },
+    {
+        "sku":"MSH11",
+        "description":"This is a variable product called a Arcadio Gym Short",
+        "category":null
+    },
+    {
+        "sku":"MT07",
+        "description":"This is a variable product called a Argus All-Weather Tank",
+        "category":null
+    },
+    {
+        "sku":"WH09",
+        "description":"This is a variable product called a Ariel Roll Sleeve Sweatshirt",
+        "category":null
+    },
+    {
+        "sku":"WSH04",
+        "description":"This is a variable product called a Artemis Running Short",
+        "category":null
+    }
+]

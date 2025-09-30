@@ -1,0 +1,12 @@
+{
+    "job_name": "scraping-course-ecommerce",
+    "total_items_scraped": 31,
+    "total_errors": 1,
+    "performance_metrics": {
+        "p95_extraction_time_seconds": 5.41,
+        "average_extraction_time_seconds": 4.03,
+        "total_duration_seconds": 64.55,
+        "target_p95_seconds": 120,
+        "target_met": true
+    }
+}

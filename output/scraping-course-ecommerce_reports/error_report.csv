@@ -1,0 +1,2 @@
+url,stage,error,field,selector
+https://www.scrapingcourse.com/ecommerce/product/aeon-capri/,navigation,Timeout waiting for row selector 'div.product' on https://www.scrapingcourse.com/ecommerce/product/aeon-capri/.,,

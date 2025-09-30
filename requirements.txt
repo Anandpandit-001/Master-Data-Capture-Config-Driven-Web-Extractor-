@@ -1,0 +1,11 @@
+typer
+pyyaml
+pydantic
+playwright
+playwright-stealth
+beautifulsoup4
+lxml
+pandas
+openpyxl
+nest_asyncio
+numpy

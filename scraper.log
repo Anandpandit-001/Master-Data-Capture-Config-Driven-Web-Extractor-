@@ -1,0 +1,293 @@
+2025-09-30 07:35:18,604 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 07:35:18,656 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 07:37:21,053 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 07:37:21,058 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 07:38:29,202 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 07:38:29,209 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 07:53:47,966 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 07:53:47,973 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 07:53:49,060 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 07:53:49,259 [ERROR] [web_extractor.core.scraper] A critical error occurred in run(): 'Stealth' object has no attribute 'apply_async'
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\scraper.py", line 46, in run
+    page = await self.browser_manager.new_page(self.config.auth.session_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\browser_manager.py", line 58, in new_page
+    await self.stealth.apply_async(page)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Stealth' object has no attribute 'apply_async'
+2025-09-30 07:53:49,379 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 07:53:49,382 [INFO] [web_extractor.utils.reporting] No errors to report.
+2025-09-30 07:53:49,383 [INFO] [web_extractor.utils.reporting] Performance and error reports generated in: output\scraping-course-ecommerce_reports
+2025-09-30 07:53:49,383 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-09-30 07:55:05,164 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 07:55:05,169 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 07:55:06,159 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 07:55:06,288 [ERROR] [web_extractor.core.scraper] A critical error occurred in run(): object AsyncWrappingContextManager can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\scraper.py", line 46, in run
+    page = await self.browser_manager.new_page(self.config.auth.session_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\browser_manager.py", line 59, in new_page
+    await self.stealth.use_async(page)  # <-- this fixes your AttributeError
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object AsyncWrappingContextManager can't be used in 'await' expression
+2025-09-30 07:55:06,403 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 07:55:06,406 [INFO] [web_extractor.utils.reporting] No errors to report.
+2025-09-30 07:55:06,406 [INFO] [web_extractor.utils.reporting] Performance and error reports generated in: output\scraping-course-ecommerce_reports
+2025-09-30 07:55:06,407 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-09-30 07:58:30,177 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 07:58:30,184 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 07:58:31,249 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 07:58:31,267 [ERROR] [web_extractor.core.scraper] A critical error occurred in run(): 'Stealth' object does not support the asynchronous context manager protocol
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\scraper.py", line 46, in run
+    page = await self.browser_manager.new_page(self.config.auth.session_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\browser_manager.py", line 57, in new_page
+    async with Stealth() as stealth:
+               ^^^^^^^^^
+TypeError: 'Stealth' object does not support the asynchronous context manager protocol
+2025-09-30 07:58:31,419 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 07:58:31,421 [INFO] [web_extractor.utils.reporting] No errors to report.
+2025-09-30 07:58:31,421 [INFO] [web_extractor.utils.reporting] Performance and error reports generated in: output\scraping-course-ecommerce_reports
+2025-09-30 07:58:31,422 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-09-30 08:00:33,898 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 08:00:33,905 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 08:00:34,928 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:00:35,081 [ERROR] [web_extractor.core.scraper] A critical error occurred in run(): 'Stealth' object has no attribute 'use'
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\scraper.py", line 46, in run
+    page = await self.browser_manager.new_page(self.config.auth.session_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\browser_manager.py", line 60, in new_page
+    stealth.use(page)  # <-- NO await
+    ^^^^^^^^^^^
+AttributeError: 'Stealth' object has no attribute 'use'
+2025-09-30 08:00:35,217 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 08:00:35,220 [INFO] [web_extractor.utils.reporting] No errors to report.
+2025-09-30 08:00:35,220 [INFO] [web_extractor.utils.reporting] Performance and error reports generated in: output\scraping-course-ecommerce_reports
+2025-09-30 08:00:35,220 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-09-30 08:01:52,159 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 08:01:52,164 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 08:01:53,205 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:01:53,321 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:00,824 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 16 items. ---
+2025-09-30 08:02:00,829 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:00,834 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:04,625 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:04,646 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:06,036 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:06,053 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:07,994 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:08,015 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:09,539 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:09,561 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:11,611 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:11,632 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:17,183 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:17,209 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:18,747 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:18,768 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:20,720 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:20,739 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:23,083 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:23,147 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:26,110 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:26,132 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:26,911 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:26,933 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:30,356 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:02:30,378 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:02:57,036 [WARNING] [web_extractor.core.scraper] Timeout waiting for row selector 'div.product' on https://www.scrapingcourse.com/ecommerce/product/arcadio-gym-short/.
+2025-09-30 08:02:57,069 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:03:00,482 [WARNING] [web_extractor.core.scraper] Timeout waiting for row selector 'div.product' on https://www.scrapingcourse.com/ecommerce/product/argus-all-weather-tank/.
+2025-09-30 08:03:00,531 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:03:00,990 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:03:04,241 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:03:04,260 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductDetail. Found 14 items. ---
+2025-09-30 08:03:04,262 [INFO] [web_extractor.core.scraper] Preparing to save output in 'output' directory...
+2025-09-30 08:03:04,286 [INFO] [web_extractor.core.scraper] Saving 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.csv
+2025-09-30 08:03:04,287 [INFO] [web_extractor.core.scraper] Saving 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.json
+2025-09-30 08:03:04,298 [INFO] [web_extractor.core.scraper] Saving 14 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.csv
+2025-09-30 08:03:04,299 [INFO] [web_extractor.core.scraper] Saving 14 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.json
+2025-09-30 08:03:04,463 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 08:09:21,246 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 08:09:21,254 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 08:09:22,314 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:22,440 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:30,184 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 16 items. ---
+2025-09-30 08:09:30,185 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:30,189 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:35,020 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:35,037 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:35,246 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:35,265 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:37,259 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:37,278 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:37,668 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:37,693 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:42,989 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:43,010 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:45,919 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:45,943 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:46,860 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:46,877 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:49,007 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:49,024 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:51,523 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:51,591 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:54,770 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:54,786 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:57,224 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:57,245 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:09:59,412 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:09:59,434 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:10:01,656 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:10:01,683 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:10:03,747 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:10:03,773 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:10:10,250 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:10:20,561 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:10:20,586 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductDetail. Found 16 items. ---
+2025-09-30 08:10:20,587 [INFO] [web_extractor.core.scraper] Preparing to save output in 'output' directory...
+2025-09-30 08:10:20,604 [INFO] [web_extractor.core.scraper] Saved 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.csv
+2025-09-30 08:10:20,607 [INFO] [web_extractor.core.scraper] Saved 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.json
+2025-09-30 08:10:20,612 [INFO] [web_extractor.core.scraper] Saved 16 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.csv
+2025-09-30 08:10:20,613 [INFO] [web_extractor.core.scraper] Saved 16 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.json
+2025-09-30 08:10:20,778 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 08:12:27,601 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 08:12:27,609 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 08:12:28,677 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:28,786 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:33,754 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 16 items. ---
+2025-09-30 08:12:33,757 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:33,764 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:38,295 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:38,318 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:38,367 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:38,385 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:41,868 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:41,888 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:44,138 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:44,156 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:47,096 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:47,117 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:50,709 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:50,726 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:53,152 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:53,172 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:55,735 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:55,757 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:56,263 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:56,338 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:58,560 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:58,580 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:12:58,886 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:12:58,908 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:13:00,946 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:13:00,962 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:13:01,742 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:13:01,761 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:13:02,867 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:13:02,882 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:13:04,003 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:13:05,279 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:13:05,298 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductDetail. Found 16 items. ---
+2025-09-30 08:13:05,300 [INFO] [web_extractor.core.scraper] Preparing to save output in 'output' directory...
+2025-09-30 08:13:05,309 [INFO] [web_extractor.core.scraper] Saved 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.csv
+2025-09-30 08:13:05,310 [INFO] [web_extractor.core.scraper] Saved 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.json
+2025-09-30 08:13:05,313 [INFO] [web_extractor.core.scraper] Saved 16 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.csv
+2025-09-30 08:13:05,314 [INFO] [web_extractor.core.scraper] Saved 16 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.json
+2025-09-30 08:13:05,449 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 08:16:25,664 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 08:16:25,671 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 08:16:26,695 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:26,843 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:30,821 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 16 items. ---
+2025-09-30 08:16:30,821 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:30,826 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:34,245 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:34,263 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:34,662 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:34,683 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:38,810 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:38,834 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:39,463 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:39,489 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:44,521 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:44,544 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:46,377 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:46,396 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:50,384 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:50,409 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:54,946 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:54,965 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:55,426 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:55,506 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:58,661 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:58,679 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:16:59,323 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:16:59,344 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:17:02,925 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:17:02,943 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:17:03,393 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:17:03,414 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:17:07,978 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:17:07,999 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:17:08,059 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:17:12,507 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:17:12,528 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductDetail. Found 16 items. ---
+2025-09-30 08:17:12,532 [INFO] [web_extractor.core.scraper] Preparing to save output in 'output' directory...
+2025-09-30 08:17:12,533 [INFO] [web_extractor.core.scraper] Saving 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.csv
+2025-09-30 08:17:12,541 [INFO] [web_extractor.core.scraper] Saving 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.json
+2025-09-30 08:17:12,545 [INFO] [web_extractor.core.scraper] Saving 16 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.csv
+2025-09-30 08:17:12,548 [INFO] [web_extractor.core.scraper] Saving 16 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.json
+2025-09-30 08:17:12,779 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 08:22:25,077 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-09-30 08:22:25,085 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-09-30 08:22:25,973 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:26,078 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:30,050 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 16 items. ---
+2025-09-30 08:22:30,051 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:30,056 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:33,478 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:22:33,499 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:33,707 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:22:33,726 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:37,955 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:22:37,976 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:41,934 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:22:41,954 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:46,441 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:22:46,462 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:51,012 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:22:51,031 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:55,154 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:22:55,173 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:22:59,039 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:22:59,057 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:23:02,913 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:23:02,982 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:23:03,610 [WARNING] [web_extractor.core.scraper] Timeout waiting for row selector 'div.product' on https://www.scrapingcourse.com/ecommerce/product/aeon-capri/.
+2025-09-30 08:23:03,642 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:23:06,819 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:23:06,840 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:23:09,034 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:23:09,053 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:23:10,538 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:23:10,561 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:23:13,278 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:23:13,295 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-09-30 08:23:13,930 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:23:19,261 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-09-30 08:23:19,289 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductDetail. Found 15 items. ---
+2025-09-30 08:23:19,292 [INFO] [web_extractor.core.scraper] Preparing to save output in 'output' directory...
+2025-09-30 08:23:19,293 [INFO] [web_extractor.core.scraper] Saving 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.csv
+2025-09-30 08:23:19,301 [INFO] [web_extractor.core.scraper] Saving 16 items for entity 'ProductList' to output\scraping-course-ecommerce_EcommerceProducts_ProductList.json
+2025-09-30 08:23:19,305 [INFO] [web_extractor.core.scraper] Saving 15 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.csv
+2025-09-30 08:23:19,307 [INFO] [web_extractor.core.scraper] Saving 15 items for entity 'ProductDetail' to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail.json
+2025-09-30 08:23:19,436 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-09-30 08:23:19,447 [INFO] [web_extractor.utils.reporting] Error report with 1 entries saved to output\scraping-course-ecommerce_reports\error_report.csv
+2025-09-30 08:23:19,447 [INFO] [web_extractor.utils.reporting] Performance and error reports generated in: output\scraping-course-ecommerce_reports
+2025-09-30 08:23:19,448 [INFO] [__main__] Job 'ecommerce_scrape' completed.
