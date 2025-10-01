@@ -11,6 +11,7 @@ from .core.browser_manager import BrowserManager
 from .core.scraper import ScraperEngine
 from .utils.logging_config import setup_logging
 from .utils.reporting import ReportGenerator
+from datetime import datetime
 
 nest_asyncio.apply()
 app = typer.Typer()
@@ -46,22 +47,26 @@ def run(
 
 async def run_scrape(config: JobConfig, headless: bool):
     """Initializes and runs the V2 scraper engine and generates reports."""
+
+    # 1. Capture the start time before the scrape begins
+    start_time = datetime.now()
     engine = None
+
     async with BrowserManager(user_agent=config.runtime.user_agent, headless=headless) as browser_manager:
         engine = ScraperEngine(config, browser_manager)
         await engine.run()
 
-    # Generate the performance and error reports after the scrape is done
+    # 2. Generate the reports after the scrape is done
     if engine:
         report_gen = ReportGenerator(
             job_name=config.site.name,
             all_results=engine.data_store,
-            # Pass the collected errors to the report generator
             errors=engine.errors,
             extraction_times=engine.extraction_times,
+            start_time=start_time,  # 3. Pass the start_time to the reporter
             p95_target=config.reporting.p95_target_seconds
         )
-        report_gen.generate()
+        report_gen.generate_all_reports()
 
 
 if __name__ == "__main__":

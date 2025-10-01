@@ -9,3 +9,4 @@ pandas
 openpyxl
 nest_asyncio
 numpy
+gitpython
