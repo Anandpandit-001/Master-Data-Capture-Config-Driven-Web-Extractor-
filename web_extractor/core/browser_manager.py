@@ -6,7 +6,6 @@ from playwright_stealth import Stealth
 
 logger = logging.getLogger(__name__)
 
-
 class BrowserManager:
     """
     Manages a stealthed Playwright browser, using an optional session file for auth.
@@ -33,14 +32,10 @@ class BrowserManager:
         logger.info("Browser shut down.")
 
     async def new_page(self, session_file: Optional[str] = None) -> Page:
-        """
-        Creates a new page from the stealthed browser, loading a session if provided.
-        """
         if not self._browser:
             raise RuntimeError("Browser is not running. Use within 'async with' block.")
 
         context = None
-
         if session_file and Path(session_file).exists():
             logger.info(f"Loading session state from {session_file}")
             context = await self._browser.new_context(
@@ -53,12 +48,10 @@ class BrowserManager:
                 logger.info("No session file configured. Creating unauthenticated context.")
             context = await self._browser.new_context(user_agent=self.user_agent)
 
-
-            page = await context.new_page()
-            await page.add_init_script("""
-                        Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
-                        Object.defineProperty(navigator, 'languages', {get: () => ['en-US', 'en']});
-                        Object.defineProperty(navigator, 'plugins', {get: () => [1,2,3,4,5]});
-                    """)
-
+        page = await context.new_page()
+        await page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+            Object.defineProperty(navigator, 'languages', {get: () => ['en-US', 'en']});
+            Object.defineProperty(navigator, 'plugins', {get: () => [1,2,3,4,5]});
+        """)
         return page

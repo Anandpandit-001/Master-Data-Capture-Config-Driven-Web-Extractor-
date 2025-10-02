@@ -291,3 +291,368 @@ AttributeError: 'Stealth' object has no attribute 'use'
 2025-09-30 08:23:19,447 [INFO] [web_extractor.utils.reporting] Error report with 1 entries saved to output\scraping-course-ecommerce_reports\error_report.csv
 2025-09-30 08:23:19,447 [INFO] [web_extractor.utils.reporting] Performance and error reports generated in: output\scraping-course-ecommerce_reports
 2025-09-30 08:23:19,448 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 01:16:02,974 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 01:16:02,985 [ERROR] [__main__] Failed to load or validate configuration: 1 validation error for JobConfig
+module.entities.1.row_selector
+  Field required [type=missing, input_value={'name': 'ProductDetail',...'div.caption h4.price'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 40, in run
+    config = load_job_config(job_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 29, in load_job_config
+    return JobConfig(**data)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for JobConfig
+module.entities.1.row_selector
+  Field required [type=missing, input_value={'name': 'ProductDetail',...'div.caption h4.price'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-10-02 01:18:12,411 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 01:18:12,416 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 01:18:28,586 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:28,806 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:39,075 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 16 items. ---
+2025-10-02 01:18:39,076 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:39,082 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:44,622 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:18:44,641 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:46,500 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:18:46,521 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:50,237 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:18:50,259 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:51,122 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:18:51,148 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:54,042 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:18:54,059 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:18:58,174 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:18:58,192 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:06,320 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:06,355 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:11,689 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:11,714 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:24,180 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:24,248 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:24,271 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:29,553 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:29,577 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:32,573 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:32,597 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:36,038 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:36,059 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:40,822 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:40,840 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:19:41,700 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:46,199 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb > a:last-child' not found for field 'category'.
+2025-10-02 01:19:46,216 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductDetail. Found 15 items. ---
+2025-10-02 01:19:46,222 [ERROR] [web_extractor.core.scraper] A critical error occurred in run(): 'ScraperEngine' object has no attribute '_save_final_output'
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\scraper.py", line 56, in run
+    self._save_final_output()
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ScraperEngine' object has no attribute '_save_final_output'
+2025-10-02 01:19:46,389 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 01:19:46,571 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 01:19:46,571 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 01:19:46,613 [INFO] [git.cmd] Ignored error after process had died: OSError(9, 'The handle is invalid', None, 6, None)
+2025-10-02 01:19:46,615 [INFO] [git.cmd] Ignored error after process had died: OSError(9, 'The handle is invalid', None, 6, None)
+2025-10-02 01:25:52,062 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 01:25:52,065 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 01:25:52,664 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:25:52,755 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:03,310 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 16 items. ---
+2025-10-02 01:26:03,311 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:03,314 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:08,159 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:08,170 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:08,417 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:08,429 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:12,888 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:12,898 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:13,039 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:13,050 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:17,123 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:17,132 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:24,537 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:24,549 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:29,147 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:29,157 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:34,789 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:34,800 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:35,278 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:35,290 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:39,479 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:39,488 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:39,604 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:39,613 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:44,320 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:44,329 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:45,541 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:45,552 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:50,946 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:50,956 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:26:51,072 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:55,064 [WARNING] [web_extractor.core.scraper] Selector '.woocommerce-breadcrumb >  a:last-of-type' not found for field 'category'.
+2025-10-02 01:26:55,075 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductDetail. Found 16 items. ---
+2025-10-02 01:26:55,076 [INFO] [web_extractor.core.scraper] Preparing to save 16 final items from entity 'ProductDetail'.
+2025-10-02 01:26:55,133 [INFO] [web_extractor.core.scraper] Saving 16 items to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail_20251002_012655_6ed45a8.csv
+2025-10-02 01:26:55,138 [INFO] [web_extractor.core.scraper] Saving 16 items to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail_20251002_012655_6ed45a8.json
+2025-10-02 01:26:55,239 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 01:26:55,282 [INFO] [web_extractor.utils.reporting] No errors to report.
+2025-10-02 01:26:55,322 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 01:26:55,323 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 01:42:32,598 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 01:42:32,601 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 01:42:33,564 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:42:33,945 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:42:45,441 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 16 items. ---
+2025-10-02 01:42:45,443 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:42:45,449 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:42:49,964 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:42:55,684 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:42:58,196 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:04,949 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:19,640 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:20,445 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:26,009 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:27,941 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:30,685 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:32,435 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:35,866 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:40,827 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:42,048 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:43:51,185 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:44:00,646 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductDetail. Found 16 items. ---
+2025-10-02 01:44:00,647 [INFO] [web_extractor.core.scraper] Preparing to save 16 final items from entity 'ProductDetail'.
+2025-10-02 01:44:00,709 [INFO] [web_extractor.core.scraper] Saving 16 items to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail_20251002_014400_6ed45a8.csv
+2025-10-02 01:44:00,722 [INFO] [web_extractor.core.scraper] Saving 16 items to output\scraping-course-ecommerce_EcommerceProducts_ProductDetail_20251002_014400_6ed45a8.json
+2025-10-02 01:44:01,213 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 01:44:01,266 [INFO] [web_extractor.utils.reporting] No errors to report.
+2025-10-02 01:44:01,318 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 01:44:01,319 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 01:52:45,550 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 01:52:45,552 [ERROR] [__main__] Failed to load or validate configuration: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+module.entities.0.paginate.stop_rule
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 40, in run
+    config = load_job_config(job_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 29, in load_job_config
+    return JobConfig(**data)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+module.entities.0.paginate.stop_rule
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-10-02 01:52:50,817 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 01:52:50,821 [ERROR] [__main__] Failed to load or validate configuration: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+module.entities.0.paginate.stop_rule
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 40, in run
+    config = load_job_config(job_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 29, in load_job_config
+    return JobConfig(**data)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+module.entities.0.paginate.stop_rule
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-10-02 01:55:14,722 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 01:55:14,725 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 01:55:15,372 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:55:15,471 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:55:37,113 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 0 items. ---
+2025-10-02 01:55:37,114 [WARNING] [web_extractor.core.scraper] No URLs to scrape for entity: ProductDetail
+2025-10-02 01:55:37,115 [WARNING] [web_extractor.core.scraper] No final data was produced to save.
+2025-10-02 01:55:37,268 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 01:55:37,375 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 01:55:37,376 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 01:56:07,495 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 01:56:07,499 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 01:56:08,218 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:56:08,573 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 01:56:25,570 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 0 items. ---
+2025-10-02 01:56:25,570 [WARNING] [web_extractor.core.scraper] No URLs to scrape for entity: ProductDetail
+2025-10-02 01:56:25,572 [WARNING] [web_extractor.core.scraper] No final data was produced to save.
+2025-10-02 01:56:26,038 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 01:56:26,194 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 01:56:26,195 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 02:33:02,616 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 02:33:02,622 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 02:33:03,538 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 02:33:03,680 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 02:33:25,057 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 0 items. ---
+2025-10-02 02:33:25,058 [WARNING] [web_extractor.core.scraper] No URLs to scrape for entity: ProductDetail
+2025-10-02 02:33:25,059 [WARNING] [web_extractor.core.scraper] No final data was produced to save.
+2025-10-02 02:33:25,335 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 02:33:25,472 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 02:33:25,473 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 02:33:32,946 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 02:33:32,951 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 02:33:34,001 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 02:33:34,561 [INFO] [web_extractor.core.browser_manager] No session file configured. Creating unauthenticated context.
+2025-10-02 02:33:51,855 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 0 items. ---
+2025-10-02 02:33:51,858 [WARNING] [web_extractor.core.scraper] No URLs to scrape for entity: ProductDetail
+2025-10-02 02:33:51,859 [WARNING] [web_extractor.core.scraper] No final data was produced to save.
+2025-10-02 02:33:52,311 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 02:33:52,468 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 02:33:52,468 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 02:38:16,864 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 02:38:16,871 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 02:38:18,081 [INFO] [web_extractor.core.browser_manager] Loading session state from state/scrapingcourse_session.json
+2025-10-02 02:38:18,158 [ERROR] [web_extractor.core.scraper] A critical error occurred in run(): cannot access local variable 'page' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\scraper.py", line 45, in run
+    page = await self.browser_manager.new_page(self.config.auth.session_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\core\browser_manager.py", line 64, in new_page
+    return page
+           ^^^^
+UnboundLocalError: cannot access local variable 'page' where it is not associated with a value
+2025-10-02 02:38:18,413 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 02:38:18,482 [INFO] [web_extractor.utils.reporting] No errors to report.
+2025-10-02 02:38:18,563 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 02:38:18,563 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 02:43:20,471 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 02:43:20,486 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 02:43:21,654 [INFO] [web_extractor.core.browser_manager] Loading session state from state/scrapingcourse_session.json
+2025-10-02 02:43:21,762 [INFO] [web_extractor.core.browser_manager] Loading session state from state/scrapingcourse_session.json
+2025-10-02 02:43:21,788 [ERROR] [web_extractor.core.scraper] Task for URL https://www.scrapingcourse.com/pagination failed: 'NoneType' object has no attribute 'goto'
+2025-10-02 02:43:21,790 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 0 items. ---
+2025-10-02 02:43:21,792 [WARNING] [web_extractor.core.scraper] No URLs to scrape for entity: ProductDetail
+2025-10-02 02:43:21,793 [WARNING] [web_extractor.core.scraper] No final data was produced to save.
+2025-10-02 02:43:22,042 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 02:43:22,284 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 02:43:22,285 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 02:47:40,113 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 02:47:40,116 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 02:47:40,826 [INFO] [web_extractor.core.browser_manager] Loading session state from state/scrapingcourse_session.json
+2025-10-02 02:47:40,866 [ERROR] [web_extractor.core.scraper] Task for URL https://www.scrapingcourse.com/pagination failed: 'NoneType' object has no attribute 'goto'
+2025-10-02 02:47:40,866 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 0 items. ---
+2025-10-02 02:47:40,866 [WARNING] [web_extractor.core.scraper] No URLs to scrape for entity: ProductDetail
+2025-10-02 02:47:40,867 [WARNING] [web_extractor.core.scraper] No final data was produced to save.
+2025-10-02 02:47:41,005 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 02:47:41,103 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 02:47:41,104 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 02:51:27,923 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 02:51:27,926 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 02:51:28,692 [INFO] [web_extractor.core.browser_manager] Loading session state from state/scrapingcourse_session.json
+2025-10-02 02:51:28,736 [ERROR] [web_extractor.core.scraper] Task for URL https://www.scrapingcourse.com/pagination failed: 'NoneType' object has no attribute 'goto'
+2025-10-02 02:51:28,737 [INFO] [web_extractor.core.scraper] --- Finished entity: ProductList. Found 0 items. ---
+2025-10-02 02:51:28,737 [WARNING] [web_extractor.core.scraper] No URLs to scrape for entity: ProductDetail
+2025-10-02 02:51:28,737 [WARNING] [web_extractor.core.scraper] No final data was produced to save.
+2025-10-02 02:51:28,883 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 02:51:28,975 [INFO] [web_extractor.utils.reporting] All reports generated in: reports
+2025-10-02 02:51:28,975 [INFO] [__main__] Job 'ecommerce_scrape' completed.
+2025-10-02 03:59:57,765 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 03:59:57,772 [ERROR] [__main__] Failed to load or validate configuration: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+module.entities.0.paginate.stop_rule
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 39, in run
+    config = load_job_config(job_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 28, in load_job_config
+    return JobConfig(**data)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+module.entities.0.paginate.stop_rule
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-10-02 04:07:34,851 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 04:07:34,858 [ERROR] [__main__] Failed to load or validate configuration: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+module.entities.0.paginate.stop_rule
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 39, in run
+    config = load_job_config(job_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 28, in load_job_config
+    return JobConfig(**data)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+module.entities.0.paginate.stop_rule
+  Field required [type=missing, input_value={'type': 'next_button', '....next', 'max_pages': 10}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-10-02 04:10:49,098 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 04:10:49,104 [ERROR] [__main__] Failed to load or validate configuration: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+module.entities.0.paginate.stop_rule
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+Traceback (most recent call last):
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 39, in run
+    config = load_job_config(job_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\web_extractor\main.py", line 28, in load_job_config
+    return JobConfig(**data)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Anand ganesh\PycharmProjects\Master Data Capture (Config-Driven Web Extractor)\.venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for JobConfig
+module.entities.0.paginate.param
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+module.entities.0.paginate.stop_rule
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-10-02 04:21:09,745 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 04:21:09,750 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 04:21:11,203 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 04:31:28,732 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 04:31:28,737 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 04:31:29,909 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-02 09:20:59,368 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-02 09:20:59,374 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-02 09:21:00,572 [INFO] [web_extractor.core.browser_manager] Browser shut down.
+2025-10-03 00:33:11,825 [INFO] [__main__] Initiating job: ecommerce_scrape
+2025-10-03 00:33:11,829 [INFO] [web_extractor.core.browser_manager] Starting browser...
+2025-10-03 00:33:28,664 [INFO] [web_extractor.core.browser_manager] Browser shut down.

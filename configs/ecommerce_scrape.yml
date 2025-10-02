@@ -1,0 +1,34 @@
+site:
+  name: MyEcommerceSite
+  base_url: "https://www.scrapingcourse.com"
+
+auth:
+  session_file: "state/scrapingcourse_session.json"
+
+runtime:
+  concurrency: 5
+  sleep_ms_between_pages: 1500   # ⏳ increased a bit for slow loads
+  stop_after_n_errors: 50
+
+module:
+  name: products
+  entities:
+    - name: ProductList
+      url: "/dashboard/"
+
+      row_selector: "div.product-item"
+      fields:
+        detail_url: "a@href"
+
+    - name: ProductDetail
+      follow_from: "ProductList.detail_url"
+      row_selector: "div.summary"
+      fields:
+        product_name: "h1.product_title"
+        price: "p.price"
+        description: "div.woocommerce-product-details__short-description"
+
+output:
+  dir: "./output"
+  formats: ["csv", "json"]
+  primary_key: ["product_name"]

@@ -1,13 +1,13 @@
-
 from pydantic import BaseModel, Field
-from typing import Dict, List, Optional, Any, Union
+from typing import Dict, List, Optional
+
+
 class SiteConfig(BaseModel):
     name: str
     base_url: str
 
 class AuthConfig(BaseModel):
-    """Used for session-based auth, can be null for public sites."""
-    session_file: Optional[str] = None
+    session_file: Optional[str] = Field(None, description="Path to a session file for authentication.")
 
 class RuntimeConfig(BaseModel):
     sleep_ms_between_pages: int = 500
@@ -20,53 +20,41 @@ class RuntimeConfig(BaseModel):
     stop_after_n_errors: int = 50
 
 class PaginateConfig(BaseModel):
-    param: str
-    start: int = 1
-    stop_rule: str
+    """Defines how to navigate through multiple pages for a single entity."""
+    type: str  # Currently supports 'next_button'
+    selector: Optional[str] = Field(None, description="CSS selector for the 'next' button or link.")
+    max_pages: Optional[int] = Field(None, description="An optional limit on how many pages to scrape.")
 
 class Entity(BaseModel):
-    name: str
-    url: Optional[str] = None
-    follow_from: Optional[str] = None
-    paginate: Optional[PaginateConfig] = None
-    row_selector: str
-    fields: Dict[str, str]
+    """
+    Defines a data structure to be scraped. A job can have multiple entities
+    that depend on each other (e.g., scrape a ProductList, then ProductDetail).
+    """
+    name: str = Field(..., description="Unique name for the entity, e.g., 'ProductList'.")
+    url: Optional[str] = Field(None, description="The starting URL to scrape for this entity.")
+    follow_from: Optional[str] = Field(None, description="The source of URLs from a previous entity, e.g., 'ProductList.detail_url'.")
+    paginate: Optional[PaginateConfig] = Field(None, description="Pagination rules for this entity, if any.")
+    row_selector: str = Field(..., description="CSS selector for the main container of each item.")
+    fields: Dict[str, str] = Field(..., description="A dictionary of field names and their CSS selectors.")
 
-class DiscoveryConfig(BaseModel):
-    """Defines rules for the initial URL discovery phase."""
-    start_page: str
-    link_selector: str
-    wait_for_selectors: Optional[List[str]] = Field(
-        None, description="A list of selectors to wait for before discovery."
-    )
-    attribute: Optional[str] = Field(
-        None, description="Attribute to extract (defaults to href)."
-    )
-    extract_regex: Optional[str] = Field(
-        None, description="Regex to extract an ID from the attribute."
-    )
-    url_template: Optional[str] = Field(
-        None, description="Template to build the final URL, use {id}."
-    )
+
 
 class ModuleConfig(BaseModel):
     name: str
-    discovery: Optional[DiscoveryConfig] = None
     entities: List[Entity]
-
 class OutputConfig(BaseModel):
     dir: str = "./output"
     formats: List[str] = ["csv", "json"]
-    primary_key: List[str] = []
+    primary_key: Optional[List[str]] = Field(None, description="List of columns to use for removing duplicates.")
 
 class ReportingConfig(BaseModel):
     p95_target_seconds: Optional[int] = None
 
 class JobConfig(BaseModel):
-    """The root model for the scraper configuration."""
+    """The complete, top-level configuration for a single scraping job file."""
     site: SiteConfig
     auth: AuthConfig = Field(default_factory=AuthConfig)
     runtime: RuntimeConfig = Field(default_factory=RuntimeConfig)
     module: ModuleConfig
-    output: OutputConfig
+    output: OutputConfig = Field(default_factory=OutputConfig)
     reporting: ReportingConfig = Field(default_factory=ReportingConfig)
