@@ -8,6 +8,8 @@ This is a powerful, CLI-based web scraping tool built with Python. It uses a fle
 
 ```bash
 python -m venv venv
+# If above don't work
+python -m venv .venv --without-pip
 # On Mac
 source venv/bin/activate  
 # On Windows
