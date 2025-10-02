@@ -77,7 +77,7 @@ def run(
 
     # --- 1. Dynamically construct the config file path ---
     # This assumes you run the script from your project's root directory.
-    config_path = Path(f"configs/{job_name}.yml")
+    config_path = Path(f"configs/{job_name}.yaml")
     logger.info(f"Attempting to load configuration from: {config_path}")
 
     if not config_path.exists():
