@@ -11,7 +11,7 @@ python -m venv venv
 # If above don't work
 python -m venv .venv --without-pip
 # On Mac
-source venv/bin/activate  
+.\.venv\Scripts\Activate.ps1  
 # On Windows
 venv\Scripts\activate
 ```
