@@ -11,9 +11,9 @@ python -m venv venv
 # If above don't work
 python -m venv .venv --without-pip
 # On Mac
-.\.venv\Scripts\Activate.ps1  
+source .venv/bin/activate  
 # On Windows
-venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
 ```
 
 2. **Install dependencies:**
