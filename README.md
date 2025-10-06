@@ -78,6 +78,8 @@ module:
         product_name: "h1.product_title"
         price: "p.price"
         description: "div.woocommerce-product-details__short-description"
+        sku: "span.sku"
+        category: ".posted_in > a"
 
 output:
   dir: "./output"
@@ -114,7 +116,8 @@ module:
         product_name: "h1.product_title"
         price: "p.price"
         description: "div.woocommerce-product-details__short-description"
-
+        sku: "span.sku"
+        category: ".posted_in > a"
 output:
   dir: "./output"
   formats: ["csv", "json"]
