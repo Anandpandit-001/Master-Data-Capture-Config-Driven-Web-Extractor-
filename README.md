@@ -87,7 +87,7 @@ output:
   primary_key: ["product_name"]
 ```
 Demo Video:
-[[Watch the video]](https://youtu.be/MBCWIgeOSj0)
+[Watch the video](https://youtu.be/ayFmLuIl_G0)
 ### 3. Example Config File with Login
 ```yaml
 site:
@@ -126,6 +126,7 @@ output:
   primary_key: ["product_name"]
 ```
 Demo Video:
+[Watch the video](https://youtu.be/ayFmLuIl_G0)
 ### 4. Run the Scraper
 
 - **Browser open (operations visible on screen):**
