@@ -86,6 +86,7 @@ output:
   formats: ["csv", "json"]
   primary_key: ["product_name"]
 ```
+Demo Video:
 ### 3. Example Config File with Login
 ```yaml
 site:
@@ -123,6 +124,7 @@ output:
   formats: ["csv", "json"]
   primary_key: ["product_name"]
 ```
+Demo Video:
 ### 4. Run the Scraper
 
 - **Browser open (operations visible on screen):**
