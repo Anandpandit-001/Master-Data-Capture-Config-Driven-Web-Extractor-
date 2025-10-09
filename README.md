@@ -126,7 +126,7 @@ output:
   primary_key: ["product_name"]
 ```
 Demo Video:
-[Watch the video](https://youtu.be/ayFmLuIl_G0)
+[Watch the video](https://youtu.be/Ggvh6Q5AMxs)
 ### 4. Run the Scraper
 
 - **Browser open (operations visible on screen):**
