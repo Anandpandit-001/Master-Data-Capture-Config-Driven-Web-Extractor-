@@ -149,6 +149,6 @@ python -m web_extractor.main --headless your_job
 
 - **Config-Driven:** Define scrape targets and data fields in simple YAML files.  
 - **CLI Interface:** Easy to run and integrate into scripts.  
-- **Robust Scraping:** Uses Playwright and BeautifulSoup4 for modern, JavaScript-heavy sites.  
+- **Codegen Logging:** Uses Codegen to login in website and save user's credentials in session file.  
 - **Anti-Scraping Evasion:** Implements `playwright-stealth` to avoid common bot detection.    
 - **Multiple Export Formats:** Save results as CSV, JSON, or XLSX.
