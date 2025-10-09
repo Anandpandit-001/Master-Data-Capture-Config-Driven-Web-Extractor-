@@ -87,6 +87,7 @@ output:
   primary_key: ["product_name"]
 ```
 Demo Video:
+[[Watch the video]](https://youtu.be/MBCWIgeOSj0)
 ### 3. Example Config File with Login
 ```yaml
 site:
